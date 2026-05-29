@@ -4,7 +4,23 @@
       <h2>Edwin Charles</h2>
 
       <div class="nav-links">
-        <a href="#home">Home</a>
+        <div class="home-dropdown">
+          <a
+            href="#home"
+            @click="showAdminMenu = !showAdminMenu"
+          >
+            Home
+          </a>
+
+          <div v-if="showAdminMenu" class="admin-dropdown">
+            <a
+              href="https://edwin-portfolio-backend.onrender.com/admin"
+              target="_blank"
+            >
+              Control Room
+            </a>
+          </div>
+        </div>  
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
